@@ -51,7 +51,7 @@ public class Primos {
     }
 
     /**
-     * @param cuenta Este metodo cuenta cuantos primos hay
+     * @param cuenta Este metodo rellena los primos que hay en un array
      */
     public int[] rellenaPrimos(int cuenta, int dim, boolean[] esPrimo) {
         int[] primos = new int[cuenta];

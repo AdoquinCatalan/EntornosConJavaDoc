@@ -12,45 +12,37 @@ class PrimosTest {
     boolean[] esPrimo = {true,false,true,true,false};
     boolean[] paraInicializar = {true,true,true,true,true};
     @Test
-    void generarPrimos() {
-      TestPrimos = Primos.generarPrimos(TestPrimos.length);
-      for (int i = 0;i<TestPrimos.length;i++){
-      }
+    void generarPrimosDe0() {
+        int []array=new int[]{};
+        int[] resultado =Primos.generarPrimos(0);
+        assertArrayEquals(array,resultado);
     }
 
     @Test
-    void cuantosPrimos() {
-        int cuenta = 0;
-        for (int i = 0; i < esPrimo.length; i++) {
-            if (esPrimo[i]) {
-                cuenta++;
-            }
-        }
-        assertEquals(numDePrimos,cuenta);
+    void generarPrimosDe1() {
+        int []array=new int[]{};
+        int[] resultado =Primos.generarPrimos(1);
+        assertArrayEquals(array,resultado);
     }
 
     @Test
-    void rellenaPrimos() {
-        int[] primos = new int [numDePrimos];
-        for (int i = 0, j = 0; i < primos.length; i++) {
-            if (esPrimo[i]) {
-                primos[j++] = i;
-
-            }
-        }
-        assertEquals(numDePrimos,primos.length);
+    void generarPrimosDe2() {
+        int []array=new int[]{2};
+        int[] resultado =Primos.generarPrimos(2);
+        assertArrayEquals(array,resultado);
     }
 
     @Test
-    void criba() {
+    void generarPrimosDe3() {
+        int []array=new int[]{2,3};
+        int[] resultado =Primos.generarPrimos(3);
+        assertArrayEquals(array,resultado);
     }
 
     @Test
-    void inicializar() {
-        boolean[] esPrimo = new boolean[TestPrimos.length];
-        for (int i = 0; i < TestPrimos.length; i++) {
-            esPrimo[i] = true;
-        }
-        assertArrayEquals(paraInicializar,esPrimo);
+    void generarPrimosDe100() {
+        int []array=new int[]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
+        int[] resultado =Primos.generarPrimos(100);
+        assertArrayEquals(array,resultado);
     }
 }
